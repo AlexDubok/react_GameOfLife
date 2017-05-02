@@ -1,0 +1,20 @@
+{
+    "compact": false,
+    "presets": [
+        [
+            "env",
+            {
+                "targets": {
+                    "chrome": 57
+                    // "node": "current"
+                },
+                // "debug": true,
+                "useBuiltIns": true
+            }
+        ], "stage-2",
+        "react"
+    ],
+    "plugins": [
+        "react-hot-loader/babel"
+    ]
+}

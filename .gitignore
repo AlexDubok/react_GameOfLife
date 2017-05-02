@@ -1,0 +1,7 @@
+node_modules
+public/static/build
+.DS_Store
+npm-debug.log
+.idea
+.history
+.vscode
