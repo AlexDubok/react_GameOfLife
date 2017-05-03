@@ -8,6 +8,11 @@ export default class Root extends React.Component {
         store: PropTypes.object
     };
 
+    componentDidMount() {
+        this.interval = null;
+    }
+
+
     handleClear = () => {
         const clearGrid = new Event('clearGrid');
 
@@ -18,12 +23,12 @@ export default class Root extends React.Component {
         e.preventDefault();
         e.stopPropagation();
 
-        this.interval = setInterval(() => requestAnimationFrame(this.recalc), 100);
+        this.interval = requestAnimationFrame(this.recalc);
     }
 
     handleStop = () => {
         console.log('stop!');
-        clearInterval(this.interval);
+        cancelAnimationFrame(this.interval);
     }
 
     recalc = () => {
@@ -32,6 +37,8 @@ export default class Root extends React.Component {
 
         document.dispatchEvent(getNextState);
         document.dispatchEvent(renderNext);
+
+        this.interval = requestAnimationFrame(this.recalc);
     }
 
     render() {

@@ -24,37 +24,15 @@ module.exports = {
         rules: [
             { test: /\.(js|jsx)$/, use: 'babel-loader' },
             {
-                test: /\.css$/,
+                test: /\.(css|less)$/,
                 exclude: /node_modules/,
                 use: [
                     'style-loader',
-                    {
-                        loader: 'css-loader',
-                        query: {
-                            modules: true,
-                            localIdentName: '__[hash:base64:5]'
-                        }
-                    },
-                    'postcss-loader'
-                ]
-            },
-            {
-                test: /\.less$/,
-                exclude: /node_modules/,
-                use: [
-                    'style-loader',
-                    {
-                        loader: 'css-loader',
-                        query: {
-                            modules: true,
-                            sourceMap: true,
-                            importLoaders: 2,
-                            localIdentName: '[local]__[hash:base64:5]'
-                        }
-                    },
+                    'css-loader',
+                    'postcss-loader',
                     'less-loader'
                 ]
-            }
+            }        
         ]
     },
     plugins: [
@@ -66,7 +44,7 @@ module.exports = {
             // },
             template: './src/index.html'
         }),
-        new ProgressBarPlugin({ format: '  Building [:bar] ' + chalk.green.bold(':percent') + ' (:elapsed seconds)', clear: false }),
+        new ProgressBarPlugin({ format: '  Building Game of Life [:bar] ' + chalk.green.bold(':percent') + ' (:elapsed seconds)', clear: false }),
         new webpack.HotModuleReplacementPlugin(),
     ]
 };

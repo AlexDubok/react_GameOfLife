@@ -9,6 +9,7 @@
                     // "node": "current"
                 },
                 // "debug": true,
+                "modules": false,
                 "useBuiltIns": true
             }
         ], "stage-2",
