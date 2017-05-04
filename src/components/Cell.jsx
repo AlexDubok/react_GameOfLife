@@ -35,7 +35,7 @@ class Cell extends PureComponent {
     }
 
     handleCellClick = () => {
-        // console.log(this.props.id);
+        console.log(this.state.isAlive);
         this.setState({ isAlive: this.state.isAlive ? 0 : 1 });
     }
 
@@ -87,7 +87,7 @@ class Cell extends PureComponent {
     };
 
     renderNextState = () => {
-        if (this.state.nextState !== this.state.isAlive) {
+        if (this.nextState !== this.state.isAlive) {
             this.setState({ isAlive: this.nextState });
         }
     };
@@ -99,7 +99,7 @@ class Cell extends PureComponent {
         });
 
         return (
-            <div ref={el => this.cell = el} className={cellStyles} onClick={this.handleCellClick} />
+            <div className={cellStyles} onClick={this.handleCellClick} />
         );
     }
 }

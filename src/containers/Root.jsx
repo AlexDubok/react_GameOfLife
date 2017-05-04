@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 // import utils from '../utils.js';
+import Chart from '../components/Chart.jsx';
 import Universe from '../components/Universe.jsx';
 
 export default class Root extends React.Component {
@@ -47,14 +48,7 @@ export default class Root extends React.Component {
 
         return (
             <div>
-                <Universe
-                    width={81}
-                    height={81}
-                    size={size}
-                />
-                <button onClick={this.handleStart}>START</button>
-                <button onClick={this.handleClear}>Clear</button>
-                <button onClick={this.handleStop}>STOP</button>
+                <Chart size={size} />
             </div>
         );
     }
