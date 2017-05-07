@@ -1,0 +1,50 @@
+@import '../assets/colorScheme.less';
+
+* {
+    box-sizing : border-box;
+}
+
+body {
+    background: var(--background-color);
+}
+
+.Layout {
+    width: 1000px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .controls {
+        display: flex;
+        width: 250px;
+        margin: 10px 0;
+    }
+
+    .grid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .d3Grid {
+        fill: var(--field-bg);
+        .cell {
+            fill: var(--rect-color);
+            stroke: #2f444f;
+            stroke-width: 0;
+            transition: stroke-width .2s linear;
+            &:hover {
+                stroke: #2f444f;
+                stroke-width: 1px;
+                cursor: pointer;
+            }
+            &.active {
+                fill: var(--rect-color-active);
+            }
+        }
+    }
+
+
+    // background: var(--background-color);
+}

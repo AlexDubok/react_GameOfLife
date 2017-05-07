@@ -8,14 +8,14 @@
                     "chrome": 57
                     // "node": "current"
                 },
-                // "debug": true,
-                "modules": false,
-                "useBuiltIns": true
+                "debug": true,
+                "useBuiltIns": true,
+                "modules": false
             }
         ], "stage-2",
         "react"
     ],
     "plugins": [
-        "react-hot-loader/babel"
+        "react-hot-loader/babel", "transform-class-properties"
     ]
 }

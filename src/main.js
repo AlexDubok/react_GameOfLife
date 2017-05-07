@@ -1,17 +1,18 @@
+import 'babel-polyfill';
 import React            from 'react';
 import ReactDOM         from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
-import Root             from './containers/Root.jsx';
+import App              from './containers/App.jsx';
 
 ReactDOM.render(
     <AppContainer>
-        <Root />
+        <App />
     </AppContainer>,
     document.getElementById('root'));
 
 if (module.hot) {
-    module.hot.accept('./containers/Root.jsx', () => {
-        const NextApp = require('./containers/Root.jsx').default;
+    module.hot.accept('./containers/App.jsx', () => {
+        const NextApp = require('./containers/App.jsx').default;
 
         ReactDOM.render(
             <AppContainer>
