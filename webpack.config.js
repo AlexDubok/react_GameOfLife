@@ -8,7 +8,7 @@ const webpack = require('webpack');
 
 
 module.exports = {
-    devtool: 'source-map',
+    devtool: 'eval-source-map',
     entry : {
         bundle: [
             'webpack-dev-server/client?http://0.0.0.0:3000',
@@ -28,8 +28,14 @@ module.exports = {
                 exclude: /node_modules/,
                 use: [
                     'style-loader',
-                    'css-loader',
-                    'postcss-loader',
+                    { 
+                        loader: 'css-loader', 
+                        options: { 
+                            modules: true, 
+                            importLoaders: 1, 
+                            localIdentName: '[name]__[local]___[hash:base64:5]'
+                        }
+                    },
                     'less-loader'
                 ]
             }        
@@ -37,7 +43,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title : 'My Project',
+            title : 'Game of Life [DEV Challenge]',
             // inject: true,
             // minify: {
             //     collapseWhiteSpace: true

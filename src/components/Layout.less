@@ -2,6 +2,7 @@
 
 * {
     box-sizing : border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -10,41 +11,120 @@ body {
 
 .Layout {
     width: 1000px;
-    margin: 20px auto;
+    margin: auto 0;
     display: flex;
-    flex-direction: column;
     align-items: center;
 
     .controls {
-        display: flex;
         width: 250px;
-        margin: 10px 0;
-    }
-
-    .grid {
+        height: 250px;
+        flex-shrink: 0;
+        margin: auto 70px;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: space-around;
         align-items: center;
-    }
 
-    .d3Grid {
-        fill: var(--field-bg);
-        .cell {
-            fill: var(--rect-color);
-            stroke: #2f444f;
-            stroke-width: 0;
-            transition: stroke-width .2s linear;
-            &:hover {
-                stroke: #2f444f;
-                stroke-width: 1px;
-                cursor: pointer;
+        .btn {
+            border: 1px solid transparent;
+            background: var(--input-color);
+            color: black;
+            border-radius: 4px;
+            height: 30px;
+            &:hover, &:active {
+                color: white;
             }
-            &.active {
-                fill: var(--rect-color-active);
+            &:active {
+                border-color: var(--input-color);
+                background: var(--background-color);
+            }
+        }
+
+        .inputLabel {
+            color: var(--text-color);
+            margin-bottom: 5px;
+        }
+        .rangeInputContainer {
+            flex-shrink: 0;
+            width: 210px;
+            color: var(--input-color);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        input[type='range'] {
+            width: 180px;
+        }
+
+        .mainButtons {
+            height: 40px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .start {
+                border: 1px solid lightgreen;
+                color: lightgreen;
+                height: 30px;
+                border-radius: 5px;
+                background: transparent;
+                &:active {
+                    background:lightgreen;
+                }
+            }
+            .pause {
+                border: 1px solid orange;
+                color: orange;
+                border-radius: 5px;
+                height: 30px;
+                background: transparent;
+                &:active {
+                    background: orange;
+                }
+            }
+            .stop {
+                border: 1px solid tomato;
+                color: tomato;
+                border-radius: 5px;
+                height: 30px;
+                background: transparent;
+                &:active {
+                    background: tomato;
+                }
+            }
+            .start, .pause, .stop {
+                &:hover {
+                    color: white;
+                }
+                &:active {
+                    color: black;
+                }
             }
         }
     }
-
-
-    // background: var(--background-color);
+    :global {
+        .grid {
+            margin: auto 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .d3Grid {
+                fill: var(--field-bg);
+                .cell {
+                    fill: var(--rect-color);
+                    stroke: #2f444f;
+                    stroke-width: 0;
+                    transition: stroke-width .2s linear;
+                    &:hover {
+                        stroke: #2f444f;
+                        stroke-width: 1px;
+                        cursor: pointer;
+                    }
+                    &.active {
+                        fill: var(--rect-color-active);
+                    }
+                }
+            }
+        }
+    }
 }
