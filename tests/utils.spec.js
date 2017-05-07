@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import utils from '../src/utils.js';
+import GameOfLife from '../src/components/Chart.js';
 
 describe('Should generate 2-dimentional array of zeroes', () => {
     const grid = utils.generateGrid(50);

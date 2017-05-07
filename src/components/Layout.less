@@ -10,8 +10,8 @@ body {
 }
 
 .Layout {
-    width: 1000px;
-    margin: auto 0;
+    width: 1150px;
+    margin: auto;
     display: flex;
     align-items: center;
 
@@ -19,13 +19,14 @@ body {
         width: 250px;
         height: 250px;
         flex-shrink: 0;
-        margin: auto 70px;
+        margin: auto 70px auto 0;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
 
         .btn {
+            cursor: pointer;
             border: 1px solid transparent;
             background: var(--input-color);
             color: black;
@@ -93,6 +94,7 @@ body {
                 }
             }
             .start, .pause, .stop {
+                cursor: pointer;
                 &:hover {
                     color: white;
                 }

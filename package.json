@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node devserver.js",
+    "build": "cross-env NODE_ENV=production DEBUG=false webpack --config webpack-production.config.js",
     "test": "mocha --require babel-register ./tests/utils.spec.js --watch"
   },
   "keywords": [],

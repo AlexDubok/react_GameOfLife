@@ -5,10 +5,11 @@
             "env",
             {
                 "targets": {
-                    "chrome": 57
-                    // "node": "current"
+                    "chrome": 57,
+                    "node": "current",
+                    "uglify": true
                 },
-                "debug": true,
+                // "debug": true,
                 "useBuiltIns": true,
                 "modules": false
             }
