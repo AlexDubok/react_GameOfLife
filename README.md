@@ -10,7 +10,7 @@ React + D3 implementation of famous game.
  - Click "Start" to run the game.
  - Adjust playing speed with Speed slider.
  - Click "Pause" to pause the game.
- - "Stop" returns the game to the first generation of cells".
+ - "Stop" returns the game to the first generation of cells.
  - You can add / remove cells simply by clicking them.
 
 ### 2. Development mode
