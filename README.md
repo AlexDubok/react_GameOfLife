@@ -1,9 +1,10 @@
 # game-of-life
-React + D3 implementation of famous game.
+## Qualification task for the DevChallenge 11.
+## React + D3 implementation of the famous game.
 
 ### 1. Launching the project 
 
-1. Open `/dist/index.html` in latest Chrome.
+1. Open `/dist/index.html` in Chrome.
 
 ### 3. Usage
  - Set approximate number of living cells with the Population slider and click "Set random cell distribution". This will populate the board with living cells.
@@ -17,9 +18,9 @@ React + D3 implementation of famous game.
 
 1. `npm install`
 2. `npm start`
-3. Open http://localhost:3000 in latest Chrome.
+3. Open http://localhost:3000 in Chrome.
 
 #### Technologies used
 - Client: React, ES6, D3
-<!--- Tests: Mocha, Chai, Enzyme-->
+- Tests: Mocha, Chai, Enzyme
 
