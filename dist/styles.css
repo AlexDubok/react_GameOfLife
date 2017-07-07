@@ -1,0 +1,134 @@
+body {
+  --border-color: tomato;
+  --background-color: #20282d;
+  --field-bg: #0e1115;
+  --border-color: #2f444f;
+  --rect-color: #546168;
+  --rect-color-active: #3eb7ea;
+  --input-color: #3eb7ea;
+  --text-color: #888c8e;
+}
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  background: var(--background-color);
+}
+.Layout__Layout___2Ylnr {
+  width: 1150px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+.Layout__Layout___2Ylnr .Layout__controls___1x7Fc {
+  width: 250px;
+  height: 250px;
+  flex-shrink: 0;
+  margin: auto 70px auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.Layout__Layout___2Ylnr .Layout__controls___1x7Fc .Layout__btn___1L75g {
+  border: 1px solid transparent;
+  background: var(--input-color);
+  color: black;
+  border-radius: 4px;
+  height: 30px;
+}
+.Layout__Layout___2Ylnr .Layout__controls___1x7Fc .Layout__btn___1L75g:hover,
+.Layout__Layout___2Ylnr .Layout__controls___1x7Fc .Layout__btn___1L75g:active {
+  color: white;
+}
+.Layout__Layout___2Ylnr .Layout__controls___1x7Fc .Layout__btn___1L75g:active {
+  border-color: var(--input-color);
+  background: var(--background-color);
+}
+.Layout__Layout___2Ylnr .Layout__controls___1x7Fc .Layout__inputLabel___1fpdL {
+  color: var(--text-color);
+  margin-bottom: 5px;
+}
+.Layout__Layout___2Ylnr .Layout__controls___1x7Fc .Layout__rangeInputContainer___2sGDz {
+  flex-shrink: 0;
+  width: 210px;
+  color: var(--input-color);
+  display: flex;
+  justify-content: space-between;
+}
+.Layout__Layout___2Ylnr .Layout__controls___1x7Fc input[type='range'] {
+  width: 180px;
+}
+.Layout__Layout___2Ylnr .Layout__controls___1x7Fc .Layout__mainButtons___3avkh {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.Layout__Layout___2Ylnr .Layout__controls___1x7Fc .Layout__mainButtons___3avkh .Layout__start___pJ-Wl {
+  border: 1px solid lightgreen;
+  color: lightgreen;
+  height: 30px;
+  border-radius: 5px;
+  background: transparent;
+}
+.Layout__Layout___2Ylnr .Layout__controls___1x7Fc .Layout__mainButtons___3avkh .Layout__start___pJ-Wl:active {
+  background: lightgreen;
+}
+.Layout__Layout___2Ylnr .Layout__controls___1x7Fc .Layout__mainButtons___3avkh .Layout__pause___14W-N {
+  border: 1px solid orange;
+  color: orange;
+  border-radius: 5px;
+  height: 30px;
+  background: transparent;
+}
+.Layout__Layout___2Ylnr .Layout__controls___1x7Fc .Layout__mainButtons___3avkh .Layout__pause___14W-N:active {
+  background: orange;
+}
+.Layout__Layout___2Ylnr .Layout__controls___1x7Fc .Layout__mainButtons___3avkh .Layout__stop___Hx2ec {
+  border: 1px solid tomato;
+  color: tomato;
+  border-radius: 5px;
+  height: 30px;
+  background: transparent;
+}
+.Layout__Layout___2Ylnr .Layout__controls___1x7Fc .Layout__mainButtons___3avkh .Layout__stop___Hx2ec:active {
+  background: tomato;
+}
+.Layout__Layout___2Ylnr .Layout__controls___1x7Fc .Layout__mainButtons___3avkh .Layout__start___pJ-Wl:hover,
+.Layout__Layout___2Ylnr .Layout__controls___1x7Fc .Layout__mainButtons___3avkh .Layout__pause___14W-N:hover,
+.Layout__Layout___2Ylnr .Layout__controls___1x7Fc .Layout__mainButtons___3avkh .Layout__stop___Hx2ec:hover {
+  color: white;
+}
+.Layout__Layout___2Ylnr .Layout__controls___1x7Fc .Layout__mainButtons___3avkh .Layout__start___pJ-Wl:active,
+.Layout__Layout___2Ylnr .Layout__controls___1x7Fc .Layout__mainButtons___3avkh .Layout__pause___14W-N:active,
+.Layout__Layout___2Ylnr .Layout__controls___1x7Fc .Layout__mainButtons___3avkh .Layout__stop___Hx2ec:active {
+  color: black;
+}
+.Layout__Layout___2Ylnr .grid {
+  margin: auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Layout__Layout___2Ylnr .grid .d3Grid {
+  fill: var(--field-bg);
+}
+.Layout__Layout___2Ylnr .grid .d3Grid .cell {
+  fill: var(--rect-color);
+  stroke: #2f444f;
+  stroke-width: 0;
+  transition: stroke-width 0.2s linear;
+}
+.Layout__Layout___2Ylnr .grid .d3Grid .cell:hover {
+  stroke: #2f444f;
+  stroke-width: 1px;
+  cursor: pointer;
+}
+.Layout__Layout___2Ylnr .grid .d3Grid .cell.active {
+  fill: var(--rect-color-active);
+}
+
+/*# sourceMappingURL=styles.css.map*/
